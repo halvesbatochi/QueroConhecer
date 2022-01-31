@@ -21,6 +21,25 @@ class PlaceFinderViewController: UIViewController {
     }
     
     @IBAction func findCity(_ sender: Any) {
+        tfCity.resignFirstResponder()
+        let address = tfCity.text!
+        load(show: true)
+        let geoCoder = CLGeocoder()
+        geoCoder.geocodeAddressString(address) { (placemarks, error) in
+            // Como estou dentro de uma clousure preciso do SELF para ter acesso aos metodos
+            self.load(show: false)
+            guard let placemark = placemarks?.first else { return }
+            print(Place.getFormattedAddress(with: placemark))
+        }
+    }
+    
+    func load(show: Bool) {
+        viLoading.isHidden = !show
+        if show {
+            aiLoading.startAnimating()
+        } else {
+            aiLoading.stopAnimating()
+        }
     }
     
     @IBAction func close(_ sender: UIButton) {
