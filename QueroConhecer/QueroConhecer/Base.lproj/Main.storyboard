@@ -49,7 +49,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="SPZ-oF-ZGY"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="f78-2U-SMc">
                             <connections>
-                                <segue destination="ZTE-dq-cy7" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="MyC-OE-0dC"/>
+                                <segue destination="ZTE-dq-cy7" kind="presentation" identifier="finderSegue" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="MyC-OE-0dC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

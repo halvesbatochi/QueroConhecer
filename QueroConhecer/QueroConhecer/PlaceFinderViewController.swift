@@ -8,6 +8,10 @@
 import UIKit
 import MapKit
 
+protocol PlaceFinderDelegate: class {
+    func addPlace(_ place: Place)
+}
+
 class PlaceFinderViewController: UIViewController {
     
     enum PlaceFinderMessageType {
@@ -21,6 +25,7 @@ class PlaceFinderViewController: UIViewController {
     @IBOutlet weak var aiLoading: UIActivityIndicatorView!
     
     var place: Place!
+    weak var delegate: PlaceFinderDelegate?
     
 
     override func viewDidLoad() {
@@ -103,7 +108,8 @@ class PlaceFinderViewController: UIViewController {
         alert.addAction(cancelAction)
         if hasConfirmation {
             let confirmAction = UIAlertAction(title: "OK", style: .default, handler:  {(action) in
-                print("OK!!!")
+                self.delegate?.addPlace(self.place)
+                self.dismiss(animated: true, completion: nil)
             })
             alert.addAction(confirmAction)
         }
