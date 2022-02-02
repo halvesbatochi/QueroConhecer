@@ -17,6 +17,7 @@
 		5C9BE434273992FD00B81CA4 /* PlaceFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9BE433273992FD00B81CA4 /* PlaceFinderViewController.swift */; };
 		5C9BE4362739AD3700B81CA4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9BE4352739AD3700B81CA4 /* MapViewController.swift */; };
 		5CBC49F127A8257B00B9F587 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC49F027A8257B00B9F587 /* Place.swift */; };
+		5CBC49F327A85F5F00B9F587 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC49F227A85F5F00B9F587 /* PlaceAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5C9BE433273992FD00B81CA4 /* PlaceFinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFinderViewController.swift; sourceTree = "<group>"; };
 		5C9BE4352739AD3700B81CA4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		5CBC49F027A8257B00B9F587 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		5CBC49F227A85F5F00B9F587 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				5C9BE433273992FD00B81CA4 /* PlaceFinderViewController.swift */,
 				5CBC49F027A8257B00B9F587 /* Place.swift */,
 				5C9BE431273991B300B81CA4 /* PlacesTableViewController.swift */,
+				5CBC49F227A85F5F00B9F587 /* PlaceAnnotation.swift */,
 				5C9BE42627398EE800B81CA4 /* Assets.xcassets */,
 				5C9BE42827398EE800B81CA4 /* LaunchScreen.storyboard */,
 				5C9BE42B27398EE800B81CA4 /* Info.plist */,
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CBC49F327A85F5F00B9F587 /* PlaceAnnotation.swift in Sources */,
 				5C9BE42227398EE700B81CA4 /* ViewController.swift in Sources */,
 				5C9BE4362739AD3700B81CA4 /* MapViewController.swift in Sources */,
 				5C9BE432273991B300B81CA4 /* PlacesTableViewController.swift in Sources */,

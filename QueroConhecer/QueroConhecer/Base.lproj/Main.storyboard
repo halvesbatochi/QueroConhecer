@@ -199,8 +199,11 @@ você deseja conhecer...</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="GmP-Gd-zFO"/>
                                         </constraints>
-                                        <color key="barTintColor" name="main"/>
+                                        <color key="barTintColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="iMf-nC-AOL" id="4WX-7D-hwU"/>
+                                        </connections>
                                     </searchBar>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zMl-7k-FTk">
                                         <rect key="frame" x="0.0" y="50" width="394" height="486"/>
@@ -246,6 +249,10 @@ você deseja conhecer...</string>
                                     </view>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="vY6-eo-KfM">
+                                <rect key="frame" x="188.5" y="424.5" width="37" height="37"/>
+                                <color key="color" name="main"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T7b-wP-Mdy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -254,6 +261,8 @@ você deseja conhecer...</string>
                             <constraint firstItem="E9G-V0-9bM" firstAttribute="trailing" secondItem="T7b-wP-Mdy" secondAttribute="trailing" constant="-10" id="C4r-Xs-wzi"/>
                             <constraint firstItem="T7b-wP-Mdy" firstAttribute="bottom" secondItem="E9G-V0-9bM" secondAttribute="bottom" constant="10" id="hZ0-bZ-XpL"/>
                             <constraint firstItem="UpK-CU-K7s" firstAttribute="leading" secondItem="T7b-wP-Mdy" secondAttribute="leading" id="l9t-QY-Rjj"/>
+                            <constraint firstItem="vY6-eo-KfM" firstAttribute="centerY" secondItem="zMl-7k-FTk" secondAttribute="centerY" id="mux-Be-QxG"/>
+                            <constraint firstItem="vY6-eo-KfM" firstAttribute="centerX" secondItem="zMl-7k-FTk" secondAttribute="centerX" id="mzF-rn-ohN"/>
                             <constraint firstItem="E9G-V0-9bM" firstAttribute="leading" secondItem="wgA-0O-A6q" secondAttribute="leading" constant="10" id="qoY-9A-XrS"/>
                             <constraint firstItem="E9G-V0-9bM" firstAttribute="top" secondItem="T7b-wP-Mdy" secondAttribute="top" constant="10" id="wWC-Sj-wS8"/>
                             <constraint firstItem="T7b-wP-Mdy" firstAttribute="trailing" secondItem="UpK-CU-K7s" secondAttribute="trailing" id="wYi-b6-23j"/>
@@ -270,6 +279,7 @@ você deseja conhecer...</string>
                     <connections>
                         <outlet property="lbAddress" destination="2QW-OK-SfE" id="Cvn-tQ-JJQ"/>
                         <outlet property="lbName" destination="fJc-EG-nfa" id="jS0-Ca-CLa"/>
+                        <outlet property="loading" destination="vY6-eo-KfM" id="Fqq-fV-e5Q"/>
                         <outlet property="mapView" destination="zMl-7k-FTk" id="2G3-br-1je"/>
                         <outlet property="searchBar" destination="PaR-QQ-mAN" id="ag6-Vo-HL4"/>
                         <outlet property="viInfo" destination="tde-fB-9k8" id="xOh-uS-beP"/>
